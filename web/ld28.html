@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LD28</title>
+    <link rel="stylesheet" href="ld28.css">
+    <script type="text/javascript">
+		function play_music() {
+			document.getElementById('audiotag1').play();
+			document.getElementById('audiotag1').volume=0.2;
+		}
+	</script>
+	<script type="text/javascript">
+		function stop_music() {
+			document.getElementById('audiotag1').pause();
+		}
+	</script>
+  </head>
+  <body onload="play_music()" style="width:800px;margin:auto;">
+	<h1>Hello World</h1>
+	<audio id="audiotag1" preload="auto">
+		<source src="sound/music2.ogg" type="audio/ogg">
+		<source src="sound/music1.ogg" type="audio/ogg">
+		<source src="sound/music3.ogg" type="audio/ogg">
+		<source src="sound/music4.ogg" type="audio/ogg">
+		<source src="sound/music5.ogg" type="audio/ogg">
+	</audio>
+	
+	<a href="javascript:stop_music();" style="float:right;">Mute</a>
+	<a href="javascript:play_music();" style="float:right;margin-right:10px;">Un-Mute</a>
+	<br>
+	<canvas id="canvas" style="border: none;margin:auto;" width="800" height="600"></canvas>
+
+    <script type="application/dart" src="ld28.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
